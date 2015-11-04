@@ -13,13 +13,16 @@
 
 (defn- delete-droplets [] "to be implemnted")
 
-(defn- create-droplets [token number image-id]
+(defn- create-droplets [token number image-id ssh_keys]
   (if (droplets-exist? token)
     (delete-droplets))
-  (for [name (map #(str "rance" %) (range 0 number))]
-    (doall (do/create-droplet token nil {:name name :region "nyc3" :size "1gb" :image image-id}))
-    ))
+  (for [name (map #(str "droplet" %) (range 0 number))]
+    (doall (do/create-droplet token nil {:name name
+                                         :region "nyc3"
+                                         :size "1gb"
+                                         :image image-id
+                                         :ssh_keys [ssh_keys]}))))
 
 (defn -main [& args]
   (if (= (first args) "create")
-    (create-droplets (nth args 1) (nth args 2) (nth args 3))))
+    (create-droplets (nth args 1) (nth args 2) (nth args 3) (nth args 4))))
