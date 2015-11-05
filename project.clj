@@ -5,6 +5,7 @@
             :url "http://www.eclipse.org/legal/epl-v10.html"}
 
   :main digitalocean-routine.core
+  :profiles {:uberjar {:main digitalocean-routine.core :aot :all}}
   :dependencies [[org.clojure/clojure "1.7.0"]
                  [digitalocean/digitalocean "1.2"]
                  ])
