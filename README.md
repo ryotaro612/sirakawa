@@ -30,3 +30,5 @@ digitalocean-routine.sh delete
 ## License
 
 MIT
+
+Copyright (c) 2015 Kazuma SATO wa2kazusa.net
