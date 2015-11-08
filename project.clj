@@ -1,8 +1,8 @@
 (defproject digitalocean-routine "0.1.0-SNAPSHOT"
-  :description "FIXME: write description"
-  :url "http://example.com/FIXME"
-  :license {:name "Eclipse Public License"
-            :url "http://www.eclipse.org/legal/epl-v10.html"}
+  :description "A script to create and delete droplets"
+  :url "https://github.com/KazumaSATO/digitalocean-routine"
+  :license {:name "MIT License"
+            :url "https://opensource.org/licenses/MIT"}
 
   :main digitalocean-routine.core
   :profiles {:uberjar {:main digitalocean-routine.core :aot :all}}
