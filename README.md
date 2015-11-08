@@ -1,14 +1,32 @@
 # digitalocean-routine
 
-A Clojure library designed to ... well, that part is up to you.
+A script to create and delete droplets
 
 ## Usage
 
-FIXME
+### Preparation
+
+Replace placeholders in digitalocean-routine.sh.
+
+```
+token="DIGITAL OCEAN ACCESS TOKEN"
+image_id="IMAGE ID"
+ssh_key="SSH KEY FINGER PRINT"
+```
+
+### Commands
+
+Create droplets
+
+```
+digitalocean-routine.sh create <the number of droplets to create>
+```
+
+Delete all the droplets.
+```
+digitalocean-routine.sh delete
+```
 
 ## License
 
-Copyright © 2015 FIXME
-
-Distributed under the Eclipse Public License either version 1.0 or (at
-your option) any later version.
+MIT
