@@ -31,4 +31,4 @@ digitalocean-routine.sh delete
 
 MIT
 
-Copyright (c) 2015 Kazuma SATO wa2kazusa.net
+Copyright (c) 2015 Kazuma SATO [wa2kazusa.net](http://wa2kazusa.net)
