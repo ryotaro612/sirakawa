@@ -18,4 +18,10 @@ def main():
         )
         result = session.execute(stmt, {})
         for row in result:
-            print(row.company_company_id, row.description)
+            trim = row.description.strip()
+            if (
+                len(trim)
+                and trim[0] == "<"
+                and (not trim.startswith("<p") and not trim.startswith("<div"))
+            ):
+                print(row.company_company_id, row.description)
