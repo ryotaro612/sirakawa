@@ -1,0 +1,23 @@
+[project]
+name = "sqlalchemy-tutorial"
+version = "0.0.1"
+dependencies = [
+  "SQLAlchemy",
+  "pymysql"
+]
+[project.scripts]
+disruptor-desc = "disruptor:main"
+
+
+[project.optional-dependencies]
+dev = [
+  "python-lsp-server[all]", 
+  "python-lsp-black"
+]
+[build-system]
+requires = ["setuptools"]
+[pylsp.plugins.black]
+enabled=true
+
+[tool.black]
+line-length = 79
