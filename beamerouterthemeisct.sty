@@ -1,0 +1,28 @@
+% ページの左右のマージン
+\setbeamersize{text margin left=0.04\paperwidth,text margin right=0.04\paperwidth} 
+\setbeamertemplate{frametitle}{
+  \nointerlineskip % ヘッダの上の小さい白を消す
+  \begin{beamercolorbox}[wd=\paperwidth,dp=0.06\paperheight, ht=0.10\paperheight, leftskip=0.04\paperwidth, rightskip=0.04\paperwidth]{frametitle}
+    \large{\insertframetitle}
+  \end{beamercolorbox}
+}
+
+% ページをまたぐ場合に、表題の末尾にインデックスをつけない
+\setbeamertemplate{frametitle continuation}{}
+
+% footnoteの上のruleを消す
+% relaxはなにもしない命令
+% https://tex.stackexchange.com/questions/96501/what-does-relax-do
+\let\footnoterule\relax
+
+% footnoteの左側からの距離を調整
+% https://tex.stackexchange.com/questions/493437/remove-footnote-indent-for-beamer
+\addtobeamertemplate{footnote}{\hskip -0.04\paperwidth}{}
+
+% footlineはouter
+% https://www.beamer.plus/Inner-Themes-Outer-Themes-Templates.html
+\setbeamertemplate{footline}{
+  \usebeamercolor[brand]{page number in head/foot}  
+  \hfill\insertframenumber\hspace{0.04\paperwidth}
+  \vspace{0.04\paperheight}
+}

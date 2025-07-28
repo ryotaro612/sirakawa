@@ -1,6 +1,20 @@
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*~
+*.bbl
+*-SAVE-ERROR
+*.blg
+*.nav
+*.pdf
+*.run.xml
+*.snm
+*.synctex.gz
+*.toc
+*.bcf
+\#*
+.#*
+
 # Emacs
 *~
-# Python
-venv
-*.egg-info
-**/__pycache__

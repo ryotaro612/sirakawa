@@ -1,0 +1,30 @@
+% チートシート
+% https://www.cpt.univ-mrs.fr/~masson/latex/Beamer-appearance-cheat-sheet.pdf
+% ptは細かい指定はできないらしい
+% unicodeは、hyperrefへの指定で、pdfのメタデータにあるタイトルの文字化けを防ぐ
+% \documentclass[unicode, 14pt]{beamer} 
+\mode<presentation>
+% luatextja-presetは警告を出す。和書を多書体であつかう。
+% matchは「pLaTEX 2e 新ドキュメントクラス」のように \rmfamily, \textrm{...}, \sffamily 等が欧文フォントだけでなく和文フォントも変更する。
+% luatexja-presetを使うと和文がリスケールscale=0.96..される。
+\RequirePackage[match,no-math,scale=0.96221923828125]{luatexja-fontspec}
+\RequirePackage{xcolor}
+% hyprerefのため？
+\RequirePackage{bookmark}
+% mathrm=symがないと数式中\sinがLMになった。mainfontと同じになるらしい
+% mathrm=sym,mathup=sym,mathit=sym,mathsf=sym,mathbf=sym,mathtt=sym
+\RequirePackage[mathrm=sym]{unicode-math}
+\RequirePackage{biblatex}
+
+% https://tex.stackexchange.com/questions/472244/how-to-set-default-values-for-enumitem-list-parameters
+\RequirePackage{enumitem}
+
+\RequirePackage{listings}
+
+% \RequirePackage{amsmath}
+\usecolortheme{isct}
+\usefonttheme{isct}
+\useoutertheme{isct}
+\useinnertheme{isct}
+
+% \mode<all>

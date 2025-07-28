@@ -1,0 +1,167 @@
+\documentclass[unicode, 14pt, aspectratio=169]{beamer}
+\usetheme{isct}
+\addbibresource{main.bib}
+\date{\today}
+
+\title{Infinispan}
+\author{\texttt{ryotaro612}}
+\newcommand\blfootnote[1]{%
+  \begingroup
+  \renewcommand\thefootnote{}\footnote{#1}%
+  \addtocounter{footnote}{-1}%
+  \endgroup
+}
+
+% \lstdefinestyle{gostyle}
+% {
+%   language = go,
+%   keywordstyle = {\bfseries\color{brand}},
+%   morekeywords = [1]{block},
+%   keywords=[1]{type,block,struct,io.Reader,int64,fileReader,error}
+% }
+
+% \lstdefinestyle{pystyle}
+% {
+%   language = python,
+%   keywordstyle = {\bfseries\color{brand}},
+%   morekeywords = [1]{block},
+%   keywords=[1]{type,block,struct,io.Reader,int64,fileReader,error}
+% }
+% % https://tex.stackexchange.com/questions/89574/language-option-supported-in-listings
+% \lstdefinelanguage{typescript}{
+%   keywords = {new, async, return}
+% }
+% \lstdefinestyle{tsstyle}
+% {
+%   language = typescript,
+%   keywordstyle = {\bfseries\color{brand}},
+% }
+% \lstdefinelanguage{yaml}{
+% }
+% % JSON https://gist.github.com/ed-cooper/1927af4ccac39b083440d436d018d253
+% \lstdefinelanguage{json}{
+% }
+\begin{document}
+
+\begin{frame}[noframenumbering, plain]
+  \titlepage
+\end{frame}
+% \section{デザインシステム ミツバチ}
+% \begin{frame}
+%   \frametitle{ミツバチ\supercite{mitsubachi-ui}}
+%   {\large スピーダの次期デザインシステム}
+%   \par
+%   \begin{itemize}
+%   \item Web Component\supercite{web-component}で実装
+%   \item デザインの仕様はFigmaで管理
+%   \item 実装されたコンポーネントはまだ4種類だけ
+%   \item 採用中のプロジェクトはUBアカウントのみ
+%   \end{itemize}  
+% \end{frame}
+% \begin{frame}
+%   \frametitle{Web Component}
+%   {\large 独自のHTMLタグを定義できる}
+%   \par
+%   \vfill  
+%   {\large \textcolor{brand}{実装すること}}
+%   \begin{itemize}
+%   \item HTMLElementを継承するクラス、タグ名、属性値を宣言
+%   \item DOMに接続したときのコールバック（子要素の追加など）
+%   \item 属性値が代わるときのコールバック
+%   \end{itemize}
+% \end{frame}
+% % \begin{frame}
+% %   \frametitle{Web Componentの実装例}
+% %   {\large HTMLElementの継承クラスを実装}
+% % \end{frame}
+% \section{Model Context Protocol (MCP)}
+% \begin{frame}
+%   \frametitle{Model Context Protcol (MCP)}
+%   {\large LLMに情報やツールを提供するための仕様}
+%   \begin{figure}[h]
+%     \includegraphics[height=0.48\paperheight]{./img/mcp.png}
+%     \caption[mcp]{MCPクライアントとMCPサーバの連携\footnote{図の引用元: \href{https://modelcontextprotocol.io/introduction}{modelcontextprotocol.io}}}
+%     \label{fig:mcp}
+%   \end{figure}
+% \end{frame}
+% \begin{frame}
+%   \frametitle{MCPのTools}
+%   {\large LLMに手続きを提供できる}
+%   \vfill
+%   \begin{center}
+%     \textcolor{brand}{加算するtoolの実装例}
+%     \lstinputlisting[basicstyle=\small, style=tsstyle]{./code/tool.ts}
+%   \end{center}
+% \end{frame}
+% \begin{frame}
+%   \frametitle{Figmaの非公式MCP\supercite{figma-mcp}のTool}
+%   {\large FigmaのNodeのプロパティをYaml形式で返す}
+%   \vfill
+%   \begin{center}
+%     ボタンのYaml（抜粋）と描画の比較
+%   \end{center}
+%   \begin{columns}
+%     \begin{column}{0.6\linewidth}
+%       \lstinputlisting[basicstyle=\scriptsize,xleftmargin=.4\linewidth]{./code/node.yml}
+%     \end{column}
+%     \begin{column}{0.4\linewidth}
+%       \begin{figure}[h]
+%         \includegraphics[width=1\linewidth]{./img/button.png}
+%         \label{fig:button}
+%       \end{figure}        
+%     \end{column}
+%   \end{columns}
+%   Figmaのファイルは再帰的なNodeからできている
+% \end{frame}
+% \begin{frame}
+%   \frametitle{MCPでやりたいこと}
+%   {\large Figmaのデザインをミツバチで実装する}
+%   \vfill
+%   \begin{figure}[h]
+%     \includegraphics[width=0.8\linewidth]{./img/overview.png}
+%     \caption[mcp]{FigmaとミツバチのMCPの連携}
+%     \label{fig:overview}
+%   \end{figure}  
+%   % \begin{itemize}
+%   % \item FigmaのMCPが返すデザインをミツバチで実装
+%   % \item ミツバチのコンポーネントを公開
+%   % \item ミツバチのコンポーネントとFigmaのノードを対応づける
+%   % \end{itemize}
+% \end{frame}
+% \begin{frame}
+%   \frametitle{Custom Element Manifest\supercite{custom-element-manifest}}
+%   {\large Web Componentの仕様を示したJSON Schema\supercite{json-schema}}
+%   \vfill
+%   \begin{itemize}
+%   \item エディタ支援の強化、ドキュメントなどに使う
+%     \begin{itemize}
+%     \item StoryBookに情報を追加
+%     \item API Viewer Element\supercite{api-viewer}による実装の可視化
+%     \end{itemize}
+%   \item \texttt{package.json}の\texttt{customElements}キーで配布する
+%   \item Web Componentの実装からツール\supercite{analyzer}で生成できる
+%   \item MCP以外にも上述の使い道がある
+%   \end{itemize}
+% \end{frame}
+% \begin{frame}
+%   \frametitle{Custom Element Manifestの例}
+%   {\large ツールでコード内のコメントも取り出せる}
+%   \lstinputlisting[basicstyle=\small]{./code/custom.json}  
+% \end{frame}
+% \begin{frame}
+%   \frametitle{mitsubachi-ui-mcp\supercite{mitsubachi-ui-mcp}}
+%   {\large 各コンポーネントのCustom Element Manifestを公開}
+%   \par
+%   \vfill
+%   \begin{center}
+%     \textcolor{brand}{実装}
+%     \lstinputlisting[basicstyle=\scriptsize,style=tsstyle]{./code/ui-tool.ts}
+%   \end{center}
+% \end{frame}
+% \begin{frame}[allowframebreaks,t]
+%   \frametitle{参考資料}
+%   \printbibliography
+%   % \nocite{*}
+% \end{frame}
+\end{document}
+
