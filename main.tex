@@ -2,7 +2,7 @@
 \usetheme{isct}
 \addbibresource{main.bib}
 \date{\today}
-\title{Infinispanとキャッッシュの分散}
+\title{Infinispanとキャッシュの分散}
 \author{ryotaro612}
 \newcommand\blfootnote[1]{%
   \begingroup
@@ -44,6 +44,17 @@
 
 \begin{frame}[noframenumbering, plain]
   \titlepage
+\end{frame}
+\section{Infinispan}
+\begin{frame}
+  \frametitle{Infinispan}
+  {\large 分散キャッシュの実装}
+  \par
+  \vfill
+  JCache 1.0 API (jSR-107)のこと。
+  JSR-107に準拠\supercite{jsr-107}
+  JCache は、一時Java オブジェクトをメモリーにキャッシュするための標準 Java API
+  Red Hat JBoss Data Gridのオープンソースコミュニティ版\supercite{data-grid}
 \end{frame}
 % \section{デザインシステム ミツバチ}
 % \begin{frame}
@@ -157,10 +168,10 @@
 %     \lstinputlisting[basicstyle=\scriptsize,style=tsstyle]{./code/ui-tool.ts}
 %   \end{center}
 % \end{frame}
-% \begin{frame}[allowframebreaks,t]
-%   \frametitle{参考資料}
-%   \printbibliography
-%   % \nocite{*}
-% \end{frame}
+\begin{frame}[allowframebreaks,t]
+  \frametitle{参考資料}
+  \printbibliography
+  % \nocite{*}
+\end{frame}
 \end{document}
 
